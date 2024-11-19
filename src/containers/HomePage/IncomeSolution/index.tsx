@@ -1,4 +1,5 @@
-import { Button, Flex } from "@chakra-ui/react";
+import {  Flex } from "@chakra-ui/react";
+import { Button as AntdButton }from "antd" ;
 import { Typography } from "@src/components/Typography";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -30,7 +31,7 @@ const IncomeSolution = () => {
           left: "-100px",
           position: "absolute",
         }}
-        className="hidden xl:block"
+        className="hidden xl:block animate-spin"
         priority
       />
       <Image
@@ -56,6 +57,7 @@ const IncomeSolution = () => {
           left: "-50px",
           position: "absolute",
         }}
+        className="animate-spin"
         priority
       />
       <Image
@@ -68,7 +70,7 @@ const IncomeSolution = () => {
           position: "absolute",
           top: "30%",
         }}
-        className="hidden xl:block"
+        className="hidden xl:block animate-spin"
         priority
       />
       {/* <Image src=""/> */}
@@ -101,32 +103,18 @@ const IncomeSolution = () => {
           className="w-full md:w-3/4 xl:w-2/3"
           zIndex={10}
         >
-          <Button
-            sx={{
-              background: "bg.brand !important",
-            }}
-            colorScheme="green"
-            color="bg.default"
-            w={"47%"}
-            h={"48px"}
+          <AntdButton
             onClick={handleBuyMkt}
+            className="custom-button"
           >
             Buy now
-          </Button>
-          <Button
-            variant={"outline"}
-            sx={{
-              border: "1.5px solid #3E454B",
-              bgColor: "#151616",
-            }}
-            color="text.primary"
-            colorScheme=""
-            w={"47%"}
-            h={"48px"}
+          </AntdButton>
+          <AntdButton
             onClick={handleLinkLearnMore}
+            className="sub-custom-button"
           >
             Learn more
-          </Button>
+          </AntdButton>
         </Flex>
       </Flex>
       <Flex

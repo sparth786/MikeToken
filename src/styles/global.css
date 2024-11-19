@@ -100,3 +100,31 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+.custom-button{
+  background-color: #1ED760;
+  padding: 10px 30px;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  border-color: transparent;
+  width: fit-content;
+}
+.custom-button:hover{
+  border-color: #1ED760 !important;
+  color: #1ED760 !important;
+  background-color: transparent !important;
+  backdrop-filter: blur(3px);
+}
+.sub-custom-button{
+  padding: 10px 30px;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  border-color: #fff;
+  color: #fff ;
+  background-color: #ffffff26 ;
+  backdrop-filter: blur(3px);
+}
+.sub-custom-button:hover{
+  background-color: #1ed76045 !important;
+    border-color: #00d868 !important;
+    color: #fff !important;
+}

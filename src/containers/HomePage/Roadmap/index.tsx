@@ -105,12 +105,13 @@ const Roadmap: React.FC = () => {
             milestones shaping our future.
           </Typography>
         </div>
-        <div className="flex w-5/12 max-lg:w-full max-lg:mt-[24px] max-lg:justify-start justify-end">
+        <div className="flex w-5/12 max-lg:w-full max-lg:mt-[24px] max-lg:justify-center justify-end">
           <Image
             src={`/assets/images/ImageRoadmap.svg`}
             width="475"
             height="316"
             alt={""}
+            className="lg:animate-bounce"
           />
         </div>
       </div>
@@ -136,7 +137,7 @@ const Roadmap: React.FC = () => {
               ? true
               : false;
           return (
-            <GridItem key={index} area={e.name} className="w-full min-w-[25%]">
+            <GridItem key={index} area={e.name} className="w-full min-w-[25%] lg:h-[500px] hover:h-full lg:overflow-hidden transition-all duration-1000">
               <Flex
                 p={"1px"}
                 borderRadius={"8px"}
@@ -149,7 +150,7 @@ const Roadmap: React.FC = () => {
                 className="time-line"
               >
                 <Flex
-                  className={"bg-default"}
+                  className={"bg-default "}
                   w="100%"
                   borderRadius={"8px"}
                   display={"block"}
@@ -158,12 +159,14 @@ const Roadmap: React.FC = () => {
                     display={"block"}
                     borderRadius={"8px"}
                     p={"24px 16px"}
+                    transition={'all 0.5s ease-in-out'}
+                    cursor={'pointer'}
                     // className={
                     //   isActiveQuarter && isActiveYear
                     //     ? "card-bg-active"
                     //     : "bg-default"
                     // }
-                    className="bg-time-line"
+                    className="bg-time-line group"
                   >
                     <Typography
                       type="headline4"
@@ -177,7 +180,7 @@ const Roadmap: React.FC = () => {
                     {/* roadmap-icon-active */}
                     <Flex alignItems={"flex-start"}>
                       <Image
-                        className="mr-4"
+                        className="mr-4 group-hover:animate-ping"
                         src={
                           isActive
                             ? "/assets/images/icons/roadmap-icon-active.svg"
@@ -194,7 +197,7 @@ const Roadmap: React.FC = () => {
                     {e?.contentTwo && (
                       <Flex alignItems={"flex-start"}>
                         <Image
-                          className="mr-4"
+                          className="mr-4 group-hover:animate-ping"
                           src={
                             isActive && lastQuarter > e.endTime
                               ? "/assets/images/icons/roadmap-icon-active.svg"
@@ -212,7 +215,7 @@ const Roadmap: React.FC = () => {
                     {e?.contentThree && (
                       <Flex alignItems={"flex-start"}>
                         <Image
-                          className="mr-4"
+                          className="mr-4 group-hover:animate-ping"
                           src={
                             isActive && lastQuarter > e.endTime
                               ? "/assets/images/icons/roadmap-icon-active.svg"
@@ -230,7 +233,7 @@ const Roadmap: React.FC = () => {
                     {e?.contentFourth && (
                       <Flex alignItems={"flex-start"}>
                         <Image
-                          className="mr-4"
+                          className="mr-4 group-hover:animate-ping"
                           src={
                             isActive && lastQuarter > e.endTime
                               ? "/assets/images/icons/roadmap-icon-active.svg"
@@ -248,7 +251,7 @@ const Roadmap: React.FC = () => {
                     {e?.contentFifth && (
                       <Flex alignItems={"flex-start"}>
                         <Image
-                          className="mr-4"
+                          className="mr-4 group-hover:animate-ping"
                           src={
                             isActive && lastQuarter > e.endTime
                               ? "/assets/images/icons/roadmap-icon-active.svg"
@@ -266,7 +269,7 @@ const Roadmap: React.FC = () => {
                     {e?.contentSixth && (
                       <Flex alignItems={"flex-start"}>
                         <Image
-                          className="mr-4"
+                          className="mr-4 group-hover:animate-ping"
                           src={
                             isActive && lastQuarter > e.endTime
                               ? "/assets/images/icons/roadmap-icon-active.svg"
@@ -284,7 +287,7 @@ const Roadmap: React.FC = () => {
                     {e?.contentSeventh && (
                       <Flex alignItems={"flex-start"}>
                         <Image
-                          className="mr-4"
+                          className="mr-4 group-hover:animate-ping"
                           src={
                             isActive && lastQuarter > e.endTime
                               ? "/assets/images/icons/roadmap-icon-active.svg"

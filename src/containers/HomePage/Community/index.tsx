@@ -49,10 +49,11 @@ const Community: React.FC = () => {
                 <GridItem key={index} area={e.image}>
                   <Flex w={"100%"}>
                     <Link href={e.link} className="w-full" target="_blank">
-                      <div className="flex px-6 py-4 w-4/5 max max-xl:w-full rounded-[8px] item-redirect" style={{ wordBreak: "break-word" }}>
-                        <div className="max-md:min-w-[64px] min-w-[88px] w-2/12">
+                      <div className="flex px-6 py-4 w-4/5 max max-xl:w-full rounded-[8px] item-redirect group" style={{ wordBreak: "break-word", transition:'all 0.7s ease-in-out' }}>
+                        <div className="max-md:min-w-[64px] min-w-[88px] w-2/12 flex align-center">
                           <Image
                             src={`/assets/images/icons/${e.image}.svg`}
+                            className="group-hover:animate-bounce	transition-all duration-300"
                             width="48"
                             height="48"
                             alt={""}
@@ -65,6 +66,7 @@ const Community: React.FC = () => {
                             </Typography>
                             <Image
                               src={`/assets/images/icons/arrow-up-right.svg`}
+                              className="transition-all duration-300 group-hover:ml-3 group-hover:pb-3"
                               width="18"
                               height="18"
                               alt={""}

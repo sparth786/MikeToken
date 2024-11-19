@@ -65,6 +65,7 @@ const OurMission: React.FC = () => {
             mx="auto"
             src="/our-mission.svg"
             alt="Our Mission"
+            className="animate-pulse"
           />
         </Flex>
         <Flex
@@ -87,6 +88,7 @@ const OurMission: React.FC = () => {
                 background={
                   "linear-gradient(136deg, #191A21 0%, rgba(25, 26, 33, 0.00) 100%)"
                 }
+                transition={"all 0.5s ease-in-out"}
                 _hover={{
                   borderColor: "bg.brand",
                   bg: "linear-gradient(136deg, #355646 0%, rgba(26, 43, 39, 0.00) 64.06%)",

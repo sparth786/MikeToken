@@ -1,4 +1,5 @@
-import { Flex, SimpleGrid, Image } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Image, Box } from "@chakra-ui/react";
+import { Button } from "antd";
 import { Typography } from "@src/components/Typography";
 import { listHowToBuyTokens } from "@src/constants/home";
 import { ButtonComponent } from "@src/containers/PoolPage";
@@ -31,7 +32,7 @@ const HowToBuy: React.FC = () => {
       <Flex>
         <Flex position={"relative"} mx="auto">
           <Flex mt="150px" overflow={"hidden"}>
-            <Flex position={"absolute"} left={"-80%"}>
+            <Flex className="-left-[50%] hidden md:flex absolute">
               <Typography
                 type="headline1"
                 color={"bg.primary"}
@@ -44,7 +45,7 @@ const HowToBuy: React.FC = () => {
                 HOW
               </Typography>
             </Flex>
-            <Flex position={"absolute"} left={"102%"}>
+            <Flex left={"102%"} className="hidden md:flex absolute">
               <Typography
                 type="headline1"
                 color={"bg.primary"}
@@ -175,14 +176,9 @@ const HowToBuy: React.FC = () => {
           );
         })}
       </SimpleGrid>
-      <ButtonComponent
-        mt="40px"
-        maxW="242px"
-        w="100%"
-        mx="auto"
-        onClick={handleBuyMkt}
-        title="Buy now"
-      />
+      <Box display='flex' justifyContent='center' mt={6}>
+        <Button onClick={handleBuyMkt} className="custom-button">Buy now</Button>
+      </Box>
     </Flex>
   );
 };

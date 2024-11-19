@@ -1,5 +1,6 @@
 import type { ButtonProps } from "@chakra-ui/react";
 import { Button, useDisclosure, useMediaQuery } from "@chakra-ui/react";
+import {Button as AntdButton} from "antd"
 import { useWeb3React } from "@src/hooks/useWeb3React";
 import WalletModal from "../WalletModal";
 
@@ -16,21 +17,12 @@ const ButtonConnectWallet: React.FC<
   if (!account) {
     return (
       <>
-        <Button
-          className={className}
-          colorScheme="brand"
-          size="md"
-          bgColor="bg.brand !important"
-          rounded="full"
-          px={4}
-          py={1}
+        <AntdButton
           onClick={onOpen}
-          color="bg.default"
-          borderRadius={"8px"}
-          {...rest}
+          className="custom-button"
         >
           {isMobileScreen || isShortText ? "Connect" : "Connect Wallet"}
-        </Button>
+        </AntdButton>
         <WalletModal isOpen={isOpen} onDismiss={onClose} />
       </>
     );
